@@ -17,9 +17,7 @@ export default class ViewEditSobject extends LightningElement {
         this._recordId = value;
     }
 
-    handleSubmit(event) {
-        // eslint-disable-next-line no-console
-        console.log(`handleSubmit ${event}`);
+    handleSubmit() {
     }
     
     handleSuccess(event) {
@@ -30,20 +28,14 @@ export default class ViewEditSobject extends LightningElement {
 
     notifyChangeToFlow(attributeName, attributeValue) {
         const attributeChangeEvent = new FlowAttributeChangeEvent(attributeName, attributeValue);
-        // eslint-disable-next-line no-console
-        console.log(`notifyChangeToFlow ${attributeChangeEvent}`);
         this.dispatchEvent(attributeChangeEvent);
     }
 
     handleGoNext() {
-        // eslint-disable-next-line no-console
-        console.log(`handleGoNext`);
         // check if NEXT is allowed on this screen
         if (this.availableActions.find(action => action === 'NEXT')) {
             // navigate to the next screen
             const navigateNextEvent = new FlowNavigationNextEvent();
-            // eslint-disable-next-line no-console
-            console.log(`handleGoNext ${navigateNextEvent}`);
             this.dispatchEvent(navigateNextEvent);
         }
     }

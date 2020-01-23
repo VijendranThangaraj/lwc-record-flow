@@ -18,8 +18,8 @@
     <screens>
         <name>Display</name>
         <label>Display</label>
-        <locationX>378</locationX>
-        <locationY>221</locationY>
+        <locationX>426</locationX>
+        <locationY>229</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>false</allowPause>
@@ -71,6 +71,10 @@
                 </value>
             </inputParameters>
             <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>recordId</assignToReference>
+                <name>recordId</name>
+            </outputParameters>
         </fields>
         <showFooter>false</showFooter>
         <showHeader>false</showHeader>
@@ -82,7 +86,7 @@
             <targetReference>EditForm</targetReference>
         </connector>
     </start>
-    <status>Draft</status>
+    <status>Active</status>
     <variables>
         <name>recordId</name>
         <dataType>String</dataType>
